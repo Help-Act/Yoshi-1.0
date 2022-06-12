@@ -1,0 +1,31 @@
+gather("interperter/BasicExecute", "BasicExecute")
+gather("interperter/BasicLexer", "BasicLexer")
+gather("interperter/BasicParser", "BasicParser")
+
+
+rawr main() {
+    leaf lexer = BasicLexer()
+    leaf parser = BasicParser()
+
+    doc("+---------------------------+")
+    doc("+         Yoshi 1.0         +")
+    doc("+---------------------------+")
+
+    env = { }
+
+    while True {
+        seek
+            leaf text = in('Yoshi-1.0 > ')
+
+            leaf file = enter(text)
+            file.read()
+
+        catch(EOFError)
+            scatter
+
+        check(file) then
+            leaf tree = parser.parse(lexer.tokenize(text))
+                BasicExecute(tree, env)
+
+    }
+}

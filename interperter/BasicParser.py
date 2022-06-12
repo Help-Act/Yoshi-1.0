@@ -151,7 +151,7 @@ class BasicParser(Parser):
         elif p.factor0 == p.factor1:
             return False
 
-    @_('CHECK LPAREN factor EQ factor RPAREN')
+    @_('CHECK LPAREN factor EQ factor RPAREN DO')
     def expr(self, p):
         if p.factor0 == p.factor1:
             return print(str(p.factor0 == p.factor1))

@@ -1,0 +1,13 @@
+pack Yoshi() {
+    wisp Yoshi(self, x){
+        self.x = x
+
+
+    }
+
+    rawr getVersion(self){
+        stumble
+
+
+    }
+}

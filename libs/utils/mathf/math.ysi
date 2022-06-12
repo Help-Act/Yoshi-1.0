@@ -1,0 +1,10 @@
+gather("libs/utils/utils")
+
+pack Mathf(Utils) {
+    wisp Mathf(self, x){
+        super(Utils.x)
+    }
+
+
+
+}

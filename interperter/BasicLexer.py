@@ -5,7 +5,8 @@ class BasicLexer(Lexer):
     # Set of token names.   This is always required
     tokens = {NUMBER, LPAREN, RPAREN, STRING, VAR, ID, WHILE, ALSO, CHECK, DOC,
               RAWR, PLUS, MINUS, TIMES, DIVIDE, ASSIGN, CBS, CBE, TYPE, NUMCON,
-              BOOL, LIBREQ, COMMA, EQ, LT, LE, GT, GE, NE}
+              BOOL, LIBREQ, COMMA, EQ, LT, LE, GT, GE, NE, PASS, BREAK, RETURN,
+              DO}
 
     literals = {'(', ')', '{', '}', ';', ','}
 
@@ -57,6 +58,10 @@ class BasicLexer(Lexer):
     ID['true'] = BOOL
     ID['false'] = BOOL
     ID['gather'] = LIBREQ
+    ID['forage'] = RETURN
+    ID['scatter'] = BREAK
+    ID['stumble'] = PASS
+    ID['then'] = DO
 
     ignore_multi_comment = r'~~$ [a-zA-Z_][a-zA-Z0-9_] ~~$.*'
     #ignore_single_comment = r'[.*'
