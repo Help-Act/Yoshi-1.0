@@ -1,6 +1,6 @@
 # Yoshi-1.0
 
-![](image.png)
+![](YSI.png)
 
 Yoshi is a python based programming language
 
