@@ -1,5 +1,7 @@
 # Yoshi-1.0
 
+![](image.png)
+
 Yoshi is a python based programming language
 
 Yoshi's goals are to make game dev, graphical UI/GUI and other tedious small things easier capable with builtin functions, libraries, etc!
